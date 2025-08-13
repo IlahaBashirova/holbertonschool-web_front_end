@@ -571,7 +571,7 @@
 
 .post-meta-list > [class^="post-meta"]:last-child {
     border: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
 }
 /* Tag list
     ============================= */
