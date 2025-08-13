@@ -568,7 +568,7 @@
     padding-bottom: 1rem;
     border-bottom: 0.2rem solid var(--color-light-grey);
 }
-.post-meta-list [class*="post-meta"] {
+.post-meta-list :last-child [class*="post-meta"] {
     border: none;
     margin-bottom: 3rem;
 }
