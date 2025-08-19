@@ -673,4 +673,11 @@ ul.row {
         border: none;
         padding: 0 0 2rem;
     }
+    label {
+        cursor: pointer;
+        display: block;
+        flex-wrap: nowrap;
+        font-size: 1.4rem;
+        padding: 0 0.5rem;
+    }
     
