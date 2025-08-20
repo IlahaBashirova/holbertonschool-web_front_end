@@ -841,5 +841,5 @@ ul.row {
         border-bottom: .1rem solid var(--color-grey);
         padding: 0;
         cursor: text;
-        margin: 0;
+        margin: 0 1rem;
     }
