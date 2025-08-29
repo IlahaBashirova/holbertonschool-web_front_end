@@ -177,7 +177,7 @@
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
   }
-  main img {
+  img {
     width: 100%;
     height: auto;
   }
@@ -218,16 +218,16 @@
     width: calc((100% / 2) - 2rem);
   }
   @media (max-width: 767px) {
-    ul.row .row {
+    ul.row, .row {
         flex-direction: column;
         margin: 0;
+    }
     [class*="col-"] {
         margin: 0 0 3rem 0;
     }
     .col-1-3, .col-1-2 {
         width: 100%;
     } 
-    }
   }
   
   /* Navbar
