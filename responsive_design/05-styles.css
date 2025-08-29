@@ -458,6 +458,17 @@
     justify-content: center;
     min-height: 35vh;
   }
+  @media (max-width:767px) {
+    .section-hero {
+        margin: -0.1rem 0;
+    }
+    .hero-homepage {
+        background-position: 85% 0;
+    }
+    .section-body .section-hero {
+        padding: 2rem;
+    }
+  }
   /* Section Latest news
       ============================= */
   
@@ -929,4 +940,14 @@
     margin: 0 1rem;
   }
 
- 
+ /* menu btn */
+ .header .menu-btn {
+    display: none;
+ }
+ .menu-btn:checked ~ .navbar-menu {
+    display: block;
+ }
+  .menu-btn:checked ~ .navbar-menu nav {
+    max-height: 100%;
+    overflow: inherit;
+  }
