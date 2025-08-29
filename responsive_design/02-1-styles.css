@@ -428,7 +428,7 @@
   }
   @media (max-width: 767px) {
     .section-latest-news .row {
-        flex-direction: column;
+      flex-direction: column;
     }
   }
   
