@@ -202,12 +202,12 @@ a:active {
     opacity: 0;
     top: 0;
     z-index: 10;
-    transform: translatey(-1rem);
+    transform: translateY(-1rem);
     transition: transform .2s ease-in-out, opacity .2s ease-in-out;
 }
 .skip-link:focus {
     opacity:1;
-    transform: translayeY(0);
+    transform: translateY(0);
 }
 
 /*** 2. LAYOUT ***/
