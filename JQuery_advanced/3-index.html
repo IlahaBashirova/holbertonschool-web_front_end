@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 0</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+            integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+            crossorigin="anonymous">
+        </script>
+        <script>
+            function createFamilyTree() {
+                /*var $table = $("<table></table>");
+                var $thead = $("<thead></thead>");
+                var $headerRow = ("<tr></tr>");
+                $headerRow.append($("<th>Firstname</th>"));
+                $headerRow.append($("<th>Lastname</th>"));
+                $thead.append($headerRow);
+                $table.append($thead);
+                var $tbody = $("<tbody></tbody>");
+                var $familyMembers = [
+                    { firstname: "Guillaume", lastname: "Salva" },
+                    { firstname: "Paulette", lastname: "Salva" },
+                    { firstname: "Antoine", lastname: "Salva" }
+                ];
+                $faimilyMembers.forEach(function(member) {
+                    var $row = $("<tr></tr>");
+                    $row.append($("<td>" + member.firstname + "</td>"));
+                    $row.append($("<td>" + member.lastname + "</td>"));
+                    $tbody.append($row);
+                    $table.append($tbody);
+                });
+                $("body").append($table);*/
+                $("body").append(
+                    $("<table></table").append(
+                        $("<thead></thead>").append(
+                            $("<tr></tr>").append(
+                                $("<th>Firstname</th>"),
+                                $("<th>Lastname</th>")
+                            )
+                        ),
+                        $("<tbody></tbody>").append(
+                            $("<tr></tr>").append(
+                                $("<td>Guillaume</td>"),
+                                $("<td>Salva</td>")
+                            ),
+                            $("<tr></tr>").append(
+                                $("<td>Paulette</td>"),
+                                $("<td>Salva</td>")
+                            ),
+                            $("<tr></tr>").append(
+                                $("<td>Antoine</td>"),
+                                $("<td>Salva</td>")
+                            )
+                        )
+                    )
+                );
+            }
+            createFamilyTree(); 
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

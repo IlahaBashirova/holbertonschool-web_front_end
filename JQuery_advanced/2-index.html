@@ -12,13 +12,32 @@
         </script>
         <script>
             function createFamilyTree() {
-                var $table = $("<table><table>");
-                var $thead = $("<thead></thead>");
-                var $headerRow = $('<tr></tr>');
-                $headerRow.append($('<th>Header 1</th>'));
-                $headerRow.append($('<th>Header 2</th>'));
-                $thead.append($headerRow);
+                var $table = "<table>" +
+                    "<thead>" +
+                    "<tr>" +
+                        "<th>Firstname</th>" +
+                        "<th>Lastname</th>" +
+                    "</tr>" +
+                    "</thead>" +
+                    "<tbody>" +
+                        "<tr>" +
+                            "<td>Guillaume</td>" +
+                            "<td>Salva</td>" +
+                        "</tr>" +
+                        "<tr>" +
+                            "<td>Paulette</td>" +
+                            "<td>Salva</td>" +
+                        "</tr>" +
+                        "<tr>" +
+                            "<td>Antoine</td>" +
+                            "<td>Salva</td>" +
+                        "</tr>" +
+                    "</tbody>" +
+                "</table>";
+
+                $("body").append($table);
             }
+            createFamilyTree();
         </script>
     </head>
 
