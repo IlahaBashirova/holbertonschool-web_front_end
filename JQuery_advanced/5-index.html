@@ -11,37 +11,41 @@
             crossorigin="anonymous">
         </script>
         <script>
-            function createFamilyTree() {
-                $("body").append(
-                    $("<table></table>").append(
-                        $("<thead></thead>").append(
-                            $("<tr></tr>").append(
-                                $("<th>Firstname</th>"),
-                                $("<th>Lastname</th>")
-                            )
-                        ),
-                        $("<tbody></tbody>") 
-                    )
-                );
-            }
-            function addNewMember(firstname, lastname) {
-                $("tbody").append(
-                    $("<tr></tr>").append(
-                        $("<td>" + firstname + "</td>"),
-                        $("<td>" + lastname + "</td>"),
-                        $("<td>" + "x" + "</td>").css("background-color", "orange").click(function() {
-                            $(this).parent().remove();
-                        })
-                    )
-                );
-            }
-            createFamilyTree();
-            addNewMember("Guillaume", "Salva");
-            addNewMember("Arielle", "Snizt");
-            addNewMember("Fanette", "Snizt");
-            addNewMember("Gerard", "Snizt");
-            addNewMember("Victor", "Salva");
+            $(document).ready(function() {
+
+                function createFamilyTree() {
+                    $("body").append(
+                        $("<table></table>").append(
+                            $("<thead></thead>").append(
+                                $("<tr></tr>").append(
+                                    $("<th>Firstname</th>"),
+                                    $("<th>Lastname</th>")
+                                )
+                            ),
+                            $("<tbody></tbody>") 
+                        )
+                    );
+                }
+                function addNewMember(firstname, lastname) {
+                    $("tbody").append(
+                        $("<tr></tr>").append(
+                            $("<td>" + firstname + "</td>"),
+                            $("<td>" + lastname + "</td>"),
+                            $("<td>" + "x" + "</td>").css("background-color", "orange").click(function() {
+                                $(this).parent().remove();
+                            })
+                        )
+                    );
+                }
+                createFamilyTree();
+                addNewMember("Guillaume", "Salva");
+                addNewMember("Arielle", "Snizt");
+                addNewMember("Fanette", "Snizt");
+                addNewMember("Gerard", "Snizt");
+                addNewMember("Victor", "Salva");
+            })
         </script>
+
     </head>
 
     <body>
