@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 0</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                function createSearchForm() {
+                    $("tbody").append(
+                        $("<input>").attr("type", "text"),
+                        $("<input>").attr("type", "submit").click(function(){
+                            queryWikipedia($("input[type='text']").val());
+                        }),
+                        $("<ul></ul>")
+                    );
+
+                }
+                function addNewArticle(id, title, snippet) {
+                    var li = $("<li></li>");
+                    var p1 = $("<p></p>").append(
+                        $("<span></span>").text(),
+                        $("<b>" + title + "</b>")
+                    )
+                    var p2 = $("<p></p>").text(snippet);
+                    li.append(p1, p2);
+                    $("ul").append(li);
+                }
+                function queryWikipedia(search) {
+                    $.ajax({
+                        url: "https://www.mediawiki.org/w/api.php",
+                        data: {
+                            action: "query",
+                            list: "search",
+                            srsearch: search,
+                            format: "json"
+                        },
+                        dataType: "jsonp",
+                        success: function(data) {
+                            $("ul").empty();
+                            $.each(data.query.search, function(i, result) {
+                                addNewArticle(
+                                    result.pageid,
+                                    result.title,
+                                    result.snippet
+                                );
+                            });
+                        }
+                    });                    
+                }
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
